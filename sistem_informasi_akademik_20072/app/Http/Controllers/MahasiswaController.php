@@ -81,7 +81,7 @@ class MahasiswaController extends Controller
         dd($sql1);
 
         #ELOQUENT
-        $sql2 = Dosen::where('id','1')->first()->update([
+        $sql2 = Mahasiswa::where('id','1')->first()->update([
             'alamat' => 'JL.Ninjamu No.17',
             'updated_at' => now()
         ]);
@@ -102,7 +102,7 @@ class MahasiswaController extends Controller
         dd($sql1);
 
         //ELOQUENT
-        $sql2 = Dosen::where('mahasiswas','2010631170072')->delete();
+        $sql2 = Mahasiswa::where('mahasiswas','2010631170072')->delete();
         dd($sql2);
     }
     

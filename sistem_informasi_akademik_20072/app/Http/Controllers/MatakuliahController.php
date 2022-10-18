@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Matakuliah;
 use Illuminate\Support\Facades\DB;
+use App\Models\Matakuliah;
 
 class MatakuliahController extends Controller
 {
@@ -26,7 +26,7 @@ class MatakuliahController extends Controller
         dd($sql1);
 
         //ELOQUENT
-        $sql2 = Mahasiswa::create(
+        $sql2 = Matakuliah::create(
             [
                 'kode_mk' => 'FM01',
                 'nama_mk' => 'Framework',
@@ -71,7 +71,7 @@ class MatakuliahController extends Controller
         dd($sql1);
 
         #ELOQUENT
-        $sql2 = Dosen::where('id','1')->first()->update([
+        $sql2 = Matakuliah::where('id','1')->first()->update([
             'nama_mk' => 'Pemrograman Framework',
             'updated_at' => now()
         ]);
@@ -92,7 +92,7 @@ class MatakuliahController extends Controller
         dd($sql1);
 
         //ELOQUENT
-        $sql2 = Dosen::where('id','1')->delete();
+        $sql2 = Matakuliah::where('id','1')->delete();
         dd($sql2);
     }
 }
